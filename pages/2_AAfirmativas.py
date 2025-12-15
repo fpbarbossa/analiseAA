@@ -89,11 +89,11 @@ if not df_demanda.empty:
     pct_ac = (total_aprovados_ac / total_aprovados_desse_grupo * 100) if total_aprovados_desse_grupo > 0 else 0
 
     c1, c2, c3, c4, c5 = st.columns(5)
-    c1.metric("Divulgaram Inscritos AA", f"{qtd_programas_que_divulgaram}", delta=f"{pct_divulgacao:.1f}% dos filtrados")
-    c2.metric("Inscritos AA", f"{total_inscritos_aa:,.0f}", delta=f"{pct_inscritos_aa:.1f}% da demanda")
-    c3.metric("Aprovados (Cota)", f"{total_aprovados_cota:,.0f}", delta=f"{pct_cota:.1f}% dos aprovados")
-    c4.metric("Aprovados (Ampla)", f"{total_aprovados_ac:,.0f}", delta=f"{pct_ac:.1f}% dos aprovados")
-    c5.metric("Total AA Aprovados", f"{total_aa_aprovados:,.0f}", delta=f"{pct_aprovados_aa:.1f}% dos aprovados")
+    c1.metric("Divulgaram Inscritos AA", f"{qtd_programas_que_divulgaram}")
+    c2.metric("Inscritos AA", f"{total_inscritos_aa:,.0f}")
+    c3.metric("Aprovados (Cota)", f"{total_aprovados_cota:,.0f}")
+    c4.metric("Aprovados (Ampla)", f"{total_aprovados_ac:,.0f}")
+    c5.metric("Total AA Aprovados", f"{total_aa_aprovados:,.0f}")
 else:
     st.warning("Nenhum programa com dados de 'Inscritos AA' encontrado.")
 
